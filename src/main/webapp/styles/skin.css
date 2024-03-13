@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap');
+@font-face
+{
+	font-family: 'Beyond';
+	src: url('../fonts/beyond_the_mountains.otf')  format('truetype'),
+		 url('../fonts/beyond_the_mountains.ttf')  format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#login_wrap {
+  width: 100%;
+  height: 951px;
+  background: url(../images/planeGr.png) no-repeat 50% 50% / cover;
+}
+#login_wrap .inner {
+  max-width: 1140px;
+  height: 951px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#login_wrap .inner .login_box {
+  width: 336px;
+  height: 467px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#login_wrap .login_box h2 {
+  margin-top: 30px;
+  font-size: 30px;
+  font-family: 'Beyond';
+  color: #222;
+}
+
+#login_wrap .inner .login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#login_wrap .login_form span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+}
+#login_wrap .login_form .login_input {
+  padding: 8px;
+  margin-bottom: 20px;
+  /* border: 1px solid #eee;
+  border-radius: 30px;
+  background-color: #eee; */
+  border: none;
+  border-bottom: 1px solid #ddd;
+  /* outline-color: #8F50FC;; */
+}
+#login_wrap .login_form .login_input:focus {
+  outline: none;
+  border-color: #8F50FC;
+}
+#login_wrap .login_form .user_pw .login_input {
+  margin-bottom: 5px;
+}
+#login_wrap .login_form .user_id {
+  margin-left: 16px;
+}
+#login_wrap .login_form .login {
+  margin: 100px 0 50px;
+}
+#login_wrap .login_form .etc_txt {
+  text-align: end;
+  padding: 0 35px;
+}
+#login_wrap .login_form .etc_txt a {
+  color: #666;
+  font-size: 11px;
+  text-decoration: none;
+}
+#login_wrap .login_form .login_btn {
+  width: 150px;
+  margin: 0 auto 10px;
+  padding: 10px 0;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(to right, #F99D1D, #8F50FC);
+  color: #fff;
+  font-size: 22px;
+  font-family: 'East Sea Dokdo', sans-serif;
+  cursor: pointer;
+}
+#login_wrap .login_form .join_btn {
+  width: 150px;
+  text-decoration: none;
+  color: #8F50FC;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 0 auto;
+}
+
+.user_hi {
+	font-size: 11px;
+    line-height: 36px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+}
+.user_hi::befor {
+	content: '';
+	background: url('images/ticket.svg') no-repeat;
+	width: 20px;
+	height: 20px;
+}
