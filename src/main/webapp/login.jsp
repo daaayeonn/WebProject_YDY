@@ -36,7 +36,7 @@
         </script>
         
         <!-- 로그인 Form -->
-        <form class="login_form" action="LoginProcess.jsp" method="post" name="loginFrm" 
+        <form class="login_form" action="../travelix/login.do" method="post" name="loginFrm" 
         	onsubmit="return validateForm(this);">
           <div class="login">
             <div class="user_id">

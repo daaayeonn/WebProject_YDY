@@ -27,4 +27,13 @@
     <param-name>OraclePwd</param-name>
     <param-value>1234</param-value>
   </context-param>
+  
+  <servlet>
+  	<servlet-name>TravelLogin</servlet-name>
+  	<servlet-class>controller.LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>TravelLogin</servlet-name>
+  	<url-pattern>/travelix/login.do</url-pattern>
+  </servlet-mapping>
 </web-app>
