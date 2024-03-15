@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/skin.css">
-  <title>Login</title>
+  <title>travelix | 로그인</title>
 </head>
 <body>
   <div id="login_wrap">
@@ -36,23 +36,23 @@
         </script>
         
         <!-- 로그인 Form -->
-        <form class="login_form" action="../travelix/login.do" method="post" name="loginFrm" 
+        <form class="login_form" action="login.do" method="post" name="loginFrm" 
         	onsubmit="return validateForm(this);">
           <div class="login">
             <div class="user_id">
               <span>Id</span>
-              <input class="login_input" type="text" name="user_id" />
+              <input id="login_input" class="login_input" type="text" name="user_id" />
             </div>
             <div class="user_pw">
               <span>Pass</span>
-              <input class="login_input" type="password" name="user_pw" />
+              <input id="login_input" class="login_input" type="password" name="user_pw" />
             </div>
 	        <div class="etc_txt">
 		    	<a href="#">비밀번호를 잊으셨나요?</a>
 	        </div>
           </div>
           <input class="login_btn" type="submit" value="로그인" />
-          <a class="join_btn" href="#">회원가입</a>
+          <a class="join_btn" href="register.do">회원가입</a>
         </form>
       </div>
     </div>

@@ -42,4 +42,25 @@ public class MemberDAO extends JDBConnect {
 		
 		return dto;
 	} // MemberDTO 끝
+	
+	public int insertMember(MemberDTO dto) {
+		int result = 0;
+		
+		try {
+			
+			String query = "INSERT INTO travel_member (id, pass, name) VALUES (?, ?, ?)";
+			psmt = con.prepareStatement(query);
+			
+			psmt.setString(1, dto.getId());
+			psmt.setString(2, dto.getPass());
+			psmt.setString(3, dto.getName());
+			
+			result = psmt.executeUpdate();
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
 }

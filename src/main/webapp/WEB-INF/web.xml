@@ -28,12 +28,47 @@
     <param-value>1234</param-value>
   </context-param>
   
+  <context-param>
+  	<param-name>POSTS_PER_PAGE</param-name>
+  	<param-value>2</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>PAGES_PER_BLOCK</param-name>
+  	<param-value>5</param-value>
+  </context-param>
+  
   <servlet>
-  	<servlet-name>TravelLogin</servlet-name>
+  	<servlet-name>Login</servlet-name>
   	<servlet-class>controller.LoginController</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>TravelLogin</servlet-name>
-  	<url-pattern>/travelix/login.do</url-pattern>
+  	<servlet-name>Login</servlet-name>
+  	<url-pattern>/login.do</url-pattern>
   </servlet-mapping>
+  <servlet>
+  	<servlet-name>Logout</servlet-name>
+  	<servlet-class>controller.LogoutController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Logout</servlet-name>
+  	<url-pattern>/logout.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>register</servlet-name>
+  	<servlet-class>controller.registerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>register</servlet-name>
+  	<url-pattern>/register.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>fboardList</servlet-name>
+  	<servlet-class>controller.fBoardListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>fboardList</servlet-name>
+  	<url-pattern>/fBoard.do</url-pattern>
+  </servlet-mapping>  
 </web-app>

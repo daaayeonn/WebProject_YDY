@@ -1,5 +1,7 @@
+<%@page import="travleMB.MemberDTO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +18,8 @@
 <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 <link rel="stylesheet" href="styles/skin.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="js/skin.js"></script>
 </head>
 
 <body>
@@ -44,26 +48,22 @@
 							</ul>
 						</div>
 						<!-- 로그인, 회원가입 -->
-						<%
-						// 로그아웃 된 상태일 경우 로그인, 회원가입 버튼 보임
-						if (session.getAttribute("UserId") == null) {
-						%>
-						<div class="user_box ml-auto">
-							<div class="user_box_login user_box_link"><a href="login.jsp">login</a></div>
-							<div class="user_box_register user_box_link"><a href="#">register</a></div>
-						</div>
-						<%
-						} // if 끝
-						// 로그인 된 상태일 경우
-						else {
-						%>
-						<div class="user_box ml-auto">
-							<div class="user_box_hi user_box_link"><p class="user_hi">xxx, HELLO</p></div>
-							<div class="user_box_logout user_box_link"><a href="Logout.jsp">logout</a></div>
-						</div>
-						<%
-						}
-						%>
+						<c:choose>
+							<c:when test="${ sessionScope.UserId eq null }">
+								<!-- 로그인 안 했을 때 -->
+								<div class="user_box ml-auto">
+									<div class="user_box_login user_box_link"><a href="login.do">login</a></div>
+									<div class="user_box_register user_box_link"><a href="register.do">register</a></div>
+								</div>
+							</c:when>
+							<c:otherwise>
+								<div class="user_box ml-auto">
+									<div class="user_box_logout user_box_link"><a class="mypage" href="#"></a></div>
+									<div class="user_box_hi user_box_link"><p class="user_hi">${ dto.name }, HELLO</p></div>
+									<div class="user_box_logout user_box_link"><a href="logout.do">logout</a></div>
+								</div>
+							</c:otherwise>
+						</c:choose>
 					</div>
 				</div>
 			</div>		
@@ -74,9 +74,9 @@
 		<nav class="main_nav">
 			<div class="container">
 				<div class="row">
-					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+					<div id="header" class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
 						<div class="logo_container">
-							<div class="logo"><a href="#"><img src="images/logo.png" alt="">travelix</a></div>
+							<div class="logo"><a href="index.jsp"><img src="images/logo.png" alt="">travelix</a></div>
 						</div>
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
@@ -84,7 +84,14 @@
 								<li class="main_nav_item"><a href="about.html">about us</a></li>
 								<li class="main_nav_item"><a href="offers.html">offers</a></li>
 								<li class="main_nav_item"><a href="blog.html">news</a></li>
-								<li class="main_nav_item"><a href="#">customer</a></li>
+								<li class="main_nav_item customer">
+									<a href="fBoard.do">customer</a>
+									<ul class="depth02">
+										<li><a href="fBoard.do">자유게시판</a></li>
+										<li><a href="#">Q&A</a></li>
+										<li><a href="#">자료실</a></li>
+									</ul>
+								</li>
 								<li class="main_nav_item"><a href="contact.html">contact</a></li>
 							</ul>
 						</div>

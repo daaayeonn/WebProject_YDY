@@ -43,7 +43,7 @@
   margin-top: 30px;
   font-size: 30px;
   font-family: 'Beyond';
-  color: #222;
+  color: #F99D1D;
 }
 
 #login_wrap .inner .login_form {
@@ -91,15 +91,19 @@
   text-decoration: none;
 }
 #login_wrap .login_form .login_btn {
-  width: 150px;
-  margin: 0 auto 10px;
-  padding: 10px 0;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(to right, #F99D1D, #8F50FC);
+  display: block;
+  width: 60%;
+  margin: 0 auto 8px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
   color: #fff;
-  font-size: 22px;
-  font-family: 'East Sea Dokdo', sans-serif;
+  background-color: #8F50FC;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 #login_wrap .login_form .join_btn {
@@ -107,20 +111,254 @@
   text-decoration: none;
   color: #8F50FC;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0 auto;
 }
 
+/* 회원가입 */
+#register_wrap {
+  background-color: #eee;
+}
+#register_wrap .inner {
+  max-width: 1140px;
+  height: 951px;
+  padding: 0 15px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#register_wrap .inner .register_box {
+  width: 336px;
+  height: 610px;
+  padding: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+#register_wrap .register_box h2 {
+  margin-top: 30px;
+  font-size: 20px;
+  color: #8F50FC;
+}
+#register_wrap .register_form .register {
+  margin: 50px 0 50px;
+}
+#register_wrap .register [class*="user"] {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+#register_wrap .register span {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin: 0 10px;
+}
+#register_wrap .register span strong {
+  color: #F99D1D;
+}
+#register_wrap .register_form .register_input {
+  padding: 8px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+#register_wrap .register_form .register_input:focus {
+  outline: none;
+  border-color: #8F50FC;
+}
+#register_wrap .register_form .etc_txt {
+  text-align: end;
+  padding: 0 35px;
+}
+#register_wrap .register_form .register_btn {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  background-color: #8F50FC;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#pw_true {
+	color: green;
+	margin-left: 10px;
+	font-size: 10px;
+}
+#pw_false {
+	color: red;
+	margin-left: 10px;
+	font-size: 10px;
+}
+
+
+
 .user_hi {
-	font-size: 11px;
+	font-size: 10px;
     line-height: 36px;
     font-weight: 600;
     color: #FFFFFF;
-    margin: 0;
+    display: block;
+    margin: 0 10px 0 0;
 }
-.user_hi::befor {
+.mypage::after {
 	content: '';
-	background: url('images/ticket.svg') no-repeat;
+	position: absolute;
+	left: -25px;
+	top: -14px;
+	-webkit-mask: url(../images/my_page_icon.svg) no-repeat 0 0 / 100%;
+ 	mask: url(../images/my_page_icon.svg) no-repeat 0 0 / 100%;
+  	background: #fff;
+	display: block;
 	width: 20px;
 	height: 20px;
+	transition: all 0.2s
+}
+.mypage:hover::after {
+	background: #fa9e1c;
+	transition: all 0.2s
+}
+
+.customer {
+	position: relative;
+}
+.customer .depth02 {
+	position: absolute;
+	left: 50%;
+	top: 40px;
+	transform: translate(-50%, 0);
+	width: 100px;
+	height: 0px;
+	padding: 10px;
+	text-align: center;
+	border-radius: 10px;
+	background: rgba(249, 157, 29, .7);
+	box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+.customer .depth02 a {
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 5px 0;
+	line-height: 30px;
+}
+.customer .depth02 a:hover {
+	color: #222;
+}
+
+#header.on .depth02 {
+	opacity: 1;
+	transition: all 0.6s;
+	visibility: visible;
+	height: 130px;
+}
+
+.sub_free_board {
+	position: relative;
+	left: 0;
+	top: 179px;
+}
+.sub_free_board .inner {
+	max-width: 1140px;
+	padding: 100px 15px 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.search_field {
+	margin: 20px 0 80px;
+}
+.search_field select {
+	padding: 6px 10px;
+	margin-right: 15px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.search_field .search_wd {
+	padding: 5px 10px;
+	width: 300px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.search_field .search_btn {
+	padding: 5px 15px;
+	border-radius: 5px;
+	border: 1px solid #8F50FC;
+	background: #8F50FC;
+	color: #fff;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.sub_tit {
+	font-size: 24px;
+	color: #000;
+	font-weight: 700;
+	margin: 0;
+}
+
+.write_btn {
+	display: block;
+	padding: 5px 10px;
+	margin-left: auto;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	background: #fff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.board {
+	margin: 0 auto;
+	width: 100%;
+	font-size: 16px;
+}
+.board th {
+	color: #222;
+	border-top: 2px solid #555;
+	border-bottom: 2px solid #555;
+	padding: 8px 0;
+}
+.board td {
+	border-width: 1px 0px;
+	border-color: #ddd;
+	border-style: solid;
+	padding: 6px 0;
+}
+.board tr:last-child {
+	border-bottom: 2px solid #555;
+}
+.board td {
+	color: #222;
+}
+.board .title {
+	display: block;
+	padding: 0px 10px;
+	width: 100%;
+	color: #222;
+	text-align: left;
+	transition: all 0.2s;
+}
+.board .title:hover {
+	color: #8F50FC;
+	transition: all 0.2s;
+}
+.board .listX {
+	padding: 20px 0;
+	color: #666;
 }
