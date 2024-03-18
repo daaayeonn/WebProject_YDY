@@ -59,7 +59,7 @@
 							<c:otherwise>
 								<div class="user_box ml-auto">
 									<div class="user_box_logout user_box_link"><a class="mypage" href="#"></a></div>
-									<div class="user_box_hi user_box_link"><p class="user_hi">${ dto.name }, HELLO</p></div>
+									<div class="user_box_hi user_box_link"><p class="user_hi">${ sessionScope.UserName }님, 반가워요!</p></div>
 									<div class="user_box_logout user_box_link"><a href="logout.do">logout</a></div>
 								</div>
 							</c:otherwise>

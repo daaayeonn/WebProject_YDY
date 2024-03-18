@@ -73,12 +73,12 @@ public class fBoardListController extends HttpServlet {
 		
 		//dao.close();
 		
-		String paging = BoardPages.paging(totalCount, pageSize, blockPage, pageNum, pageTemp);
+		String paging = BoardPages.paging(totalCount, pageSize, blockPage, pageNum, "fBoard.do");
 		
-		map.put("paging", paging);
-		map.put("totalCount", totalCount);
-		map.put("pageSize", pageSize);
-		map.put("pageNum", pageNum);
+		map.put("paging", paging); // 출력할 페이지 번호
+		map.put("totalCount", totalCount); // 게시물의 전체 갯수
+		map.put("pageSize", pageSize); // 페이지당 출력 갯수
+		map.put("pageNum", pageNum); // 현재 페이지 번호
 		
 		req.setAttribute("boardLists", boardLists);
 		req.setAttribute("map", map);

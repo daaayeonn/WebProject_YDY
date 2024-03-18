@@ -312,6 +312,12 @@
 	margin: 0;
 }
 
+.write_notice {
+	margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+    color: #222;
+}
 .write_btn {
 	display: block;
 	padding: 5px 10px;
@@ -361,4 +367,116 @@
 .board .listX {
 	padding: 20px 0;
 	color: #666;
+}
+
+.page_temp {
+	width: 25px;
+    height: 25px;
+	margin: 20px 6px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: #8F50FC;
+    color: #fff;
+    font-weight: 700;
+}
+.page_btn {
+    width: 25px;
+    height: 25px;
+	margin: 20px 6px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    background: #eee;
+    color: #000;
+}
+
+
+.write_wrap .inner {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 70px auto;
+}
+.write_wrap h2::after {
+  content: '';
+  margin: 30px 0;
+  display: block;
+  border: 2px solid #444;
+  width: 100%;
+}
+.write_wrap .title_wrap {
+  margin: 50px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.write_wrap .title_wrap span {
+  margin-right: 20px;
+  font-weight: 700;
+}
+.write_wrap .title_wrap .title {
+  width: 94%;
+  padding: 5px 10px;
+  border: 1px solid #999;
+}
+.write_wrap .title_wrap .title:focus {
+  outline-color: #666;
+}
+.write_wrap .content {
+  width: 100%;
+  height: 500px;
+  padding: 30px;
+  resize: none;
+  border: 1px solid #999;
+}
+.write_wrap .content:focus {
+  outline-color: #666;
+}
+.write_wrap .pass_wrap {
+	margin-top: 20px;
+	display: flex;
+  	align-items: center;
+}
+.write_wrap .pass_wrap span {
+  margin-right: 20px;
+  font-weight: 700;
+}
+.write_wrap .pass_wrap .pass {
+  width: 100px;
+  padding: 5px 10px;
+  border: 1px solid #999;
+}
+.write_wrap .pass_wrap .pass:focus {
+  outline-color: #666;
+}
+.write_wrap .write_form::after {
+  content: '';
+  margin: 50px 0 20px;
+  display: block;
+  border: 2px solid #444;
+  width: 100%;
+}
+.write_wrap .btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+.write_wrap .cancel_btn {
+  margin-right:10px;
+  padding: 10px 15px;
+  background: #ddd;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #444;
+  cursor: pointer;
+}
+.write_wrap .fwrite_btn {
+  padding: 10px 15px;
+  background: #8F50FC;
+  border: none;
+  border-radius: 5px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
 }

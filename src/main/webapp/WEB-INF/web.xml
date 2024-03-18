@@ -71,4 +71,12 @@
   	<servlet-name>fboardList</servlet-name>
   	<url-pattern>/fBoard.do</url-pattern>
   </servlet-mapping>  
+  <servlet>
+  	<servlet-name>fboardWrite</servlet-name>
+  	<servlet-class>controller.fBoardWriteController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>fboardWrite</servlet-name>
+  	<url-pattern>/fBoardWrite.do</url-pattern>
+  </servlet-mapping> 
 </web-app>

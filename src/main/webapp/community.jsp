@@ -53,7 +53,7 @@
 							<c:otherwise>
 								<div class="user_box ml-auto">
 									<div class="user_box_logout user_box_link"><a class="mypage" href="#"></a></div>
-									<div class="user_box_hi user_box_link"><p class="user_hi">${ dto.name }, HELLO</p></div>
+									<div class="user_box_hi user_box_link"><p class="user_hi">${ sessionScope.UserName }님, 반가워요!</p></div>
 									<div class="user_box_logout user_box_link"><a href="logout.do">logout</a></div>
 								</div>
 							</c:otherwise>
@@ -140,7 +140,14 @@
 					<input class="search_btn" type="submit" value="검색" />
 				</form>
 			</div> <!-- form .search_field 끝 -->
-			<button class="write_btn" type="button">글쓰기</button>
+			<c:choose>
+				<c:when test="${ sessionScope.UserId eq null }">
+					<span class="write_notice">로그인 후 글을 작성하실 수 있습니다.</span>
+				</c:when>
+				<c:otherwise>
+					<button class="write_btn" type="button" onclick="location.href='fBoardWrite.do';">글쓰기</button>
+				</c:otherwise>
+			</c:choose>
 			<table class="board">
 				<tr>
 					<th width="7%">번호</th>

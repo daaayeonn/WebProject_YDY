@@ -93,4 +93,29 @@ public class FBoardDAO extends JDBConnect {
 		}
 		return fboard;
 	} // listPage 끝
+	
+	public int insertWrite(FBoardDTO dto) {
+		int result = 0;
+		
+		try {
+			String query = "INSERT INTO travel_Fboard ("
+					+ " idx, name, title, content, pass) "
+					+ "    VALUES ("
+					+ " seq_tb_num.nextval, ?, ?, ?, ?)";
+			
+			psmt = con.prepareStatement(query);
+			
+			psmt.setString(1, dto.getName());
+			psmt.setString(2, dto.getTitle());
+			psmt.setString(3, dto.getContent());
+			psmt.setString(4, dto.getPass());
+			
+			result = psmt.executeUpdate();
+		}
+		catch (Exception e) {
+			System.out.println("개시물 입력 중 예외 발생");
+			e.printStackTrace();
+		}
+		return result;
+	} // insertWrite 끝
 }
