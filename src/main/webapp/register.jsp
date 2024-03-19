@@ -8,6 +8,7 @@
 <title>travelix | 회원가입</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
+	// 비밀번호 맞는지 검증
 	$(function() {
 		$('#pw_true').hide();
 		$('#pw_false').hide();

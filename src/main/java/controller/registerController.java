@@ -24,6 +24,7 @@ public class registerController extends HttpServlet {
 		String oraclePwd = application.getInitParameter("OraclePwd");
 		
 		dao = new MemberDAO(oracleDriver, oracleUrl, oracleId, oraclePwd);
+		System.out.println("오라클 연결");
 	}
 	
 	@Override
